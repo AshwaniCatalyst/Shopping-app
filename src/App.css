@@ -1,0 +1,16 @@
+*{
+text-decoration: none;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+.headerOuterContainer{
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.cart-btn{
+  cursor: pointer;
+}
