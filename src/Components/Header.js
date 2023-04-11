@@ -11,10 +11,10 @@ const Header = () => {
     <>
       <AppBar position="relative">
         <div className="headerOuterContainer flex">
-          <div>
+          <div >
           <Link to={'/'}>
             <Typography variant="secondary">
-              <h3>CT Mart</h3>
+              <h3 className="appLogo">CT Mart</h3>
             </Typography>
             </Link>
           </div>

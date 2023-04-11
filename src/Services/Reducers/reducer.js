@@ -5,29 +5,30 @@ const initialState = {
 const cartItems = (state = initialState, action) => {
   switch (action.type) {
     case Add_To_Cart: {
-      const {id, title, image, price} = action.payLoad;
       return{
         ...state,
        productData:[
         ...state.productData,
-        {
-          id : id,
-          title : title,
-          image : image,
-          price : price,
-          counter : 1
-        }
+        action.data
        ]
       }
-    }
-      
+      // const {id, title, image, price} = action.payLoad;
       // return{
       //   ...state,
       //  productData:[
       //   ...state.productData,
-      //   action.data
+      //   {
+      //     id : id,
+      //     title : title,
+      //     image : image,
+      //     price : price,
+      //     counter : 1
+      //   }
       //  ]
       // }
+    }
+      
+      
     
 
     case Clear_Cart:
