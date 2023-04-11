@@ -18,13 +18,19 @@ const Header = () => {
             </Typography>
             </Link>
           </div>
+          <div className="flex links">
           <div>
+            <Link to={'/'}>
+            <Typography className="headerLinks">Products</Typography>
+            </Link>
+          </div>
+            <div>
             <Badge badgeContent={totalCartItems.length} color="secondary">
             <NavLink to={'/cart'}>
               <ShoppingCartIcon className="cart-btn" />
               </NavLink>
             </Badge>
-            
+            </div>
           </div>
         </div>
       </AppBar>

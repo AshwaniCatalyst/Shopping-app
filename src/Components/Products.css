@@ -9,8 +9,12 @@
   overflow: hidden;
 }
 
-.appLogo, .cart-btn{
+.appLogo, .headerLinks, .cart-btn{
   color: aliceblue;
+}
+.links{
+  flex-direction: row;
+  gap: 2rem;
 }
 .outerContainer{
     max-width: 1920px;
