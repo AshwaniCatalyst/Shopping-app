@@ -35,17 +35,27 @@
 }
 
 .cartProductOuterContainer{
-  padding: 2rem 0;
-  width: 100%;
+  padding: 3rem 0;
+ width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 .cartOuterContainer{
   display: flex;
+  max-width: 1920px;
   flex-direction: column;
+  margin: auto;
   align-items: center;
 }
 
+.cartProductDetails{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 80%;
+}
 .cartButtons{
   display: flex;
   flex-direction: column;

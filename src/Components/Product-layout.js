@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import { Button, ButtonGroup, Grid, Typography } from "@mui/material";
 import './Products.css'
-// import { addToCart } from "../Services/Actions/action";
 
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Services/Actions/action";
@@ -33,7 +32,6 @@ const ProductLayout = () => {
           <ButtonGroup variant="contained">
           <Button onClick={
             ()=> dispatch(addToCart(elem))
-            // ()=>props.addToCartHandler(elem.id)
             }>Add to Cart</Button>
           <Button>Buy Now</Button>
           </ButtonGroup>

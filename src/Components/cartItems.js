@@ -5,40 +5,33 @@ import { clearCart } from "../Services/Actions/action";
 
 const CartItems = () => {
   const CartItems = useSelector((state) => state.cartItems.productData);
+  // var temp = new Set();  
   const dispatch = useDispatch();
-  // function quantityCounter(arr, id)
-  // {
-  //   const existId = arr.find(item=> item.id===id)
-  //   if(existId)
-  //   {
+  console.log("cart data", CartItems);
 
-  //   }
-  // }
   return (
     <>
       <div className="cartOuterContainer">
-        {
-          // console.log(CartItems.length)
-          CartItems.length === 0 && (
-            <div>
-              <h4> No Items Added</h4>
-            </div>
-          )
-        }
+        {CartItems.length === 0 && (
+          <div>
+            <h4> No Items Added</h4>
+          </div>
+        )}
         {CartItems.map((productDetails, index) => {
-          // const itemCounter = quantityCounter(productDetails,productDetails.id);
           return (
             <div key={index} className="flex cartProductOuterContainer">
               <div>
                 <img
-                  src={productDetails.images[0]}
+                  src={productDetails.image}
                   alt="ProductImage"
                   className="product-Image"
                 />
               </div>
-              <Typography variant="h4">{productDetails.title}</Typography>
-              <Typography variant="h4">${productDetails.price}</Typography>
-              <Typography variant="h4">x1</Typography>
+              <div className="cartProductDetails">
+                <Typography variant="h4">{productDetails.title}</Typography>
+                <Typography variant="h4">${productDetails.price}</Typography>
+                <Typography variant="h4">x{productDetails.count}</Typography>
+              </div>
             </div>
           );
         })}
