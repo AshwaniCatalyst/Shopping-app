@@ -2,10 +2,10 @@ import { AppBar, Badge, Typography } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import React from "react";
 import "./Products.css";
-
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
+
   const totalCartItems = useSelector((state) => state.cartItems.productData);
   return (
     <>

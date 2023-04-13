@@ -2,12 +2,10 @@ import { Button, Typography } from "@mui/material";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../Services/Actions/action";
-
 const CartItems = () => {
   const CartItems = useSelector((state) => state.cartItems.productData);
-  // var temp = new Set();  
+  
   const dispatch = useDispatch();
-  console.log("cart data", CartItems);
 
   return (
     <>
@@ -22,7 +20,7 @@ const CartItems = () => {
             <div key={index} className="flex cartProductOuterContainer">
               <div>
                 <img
-                  src={productDetails.image}
+                  src={productDetails.images[0]}
                   alt="ProductImage"
                   className="product-Image"
                 />
@@ -30,7 +28,7 @@ const CartItems = () => {
               <div className="cartProductDetails">
                 <Typography variant="h4">{productDetails.title}</Typography>
                 <Typography variant="h4">${productDetails.price}</Typography>
-                <Typography variant="h4">x{productDetails.count}</Typography>
+                <Typography variant="h4">x{productDetails.stock}</Typography>
               </div>
             </div>
           );

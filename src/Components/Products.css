@@ -19,8 +19,8 @@
 .outerContainer{
     max-width: 1920px;
     margin: 3rem auto;
-    padding: 0 3rem;
 }
+
 .product-container {
   padding: 2rem;
   flex-direction: column;
@@ -28,6 +28,7 @@
   align-items: center;
   gap: 1rem;
 }
+
 
 .product-Image {
   width: 250px;
