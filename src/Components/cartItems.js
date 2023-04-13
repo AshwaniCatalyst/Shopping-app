@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "../Services/Actions/action";
 const CartItems = () => {
   const CartItems = useSelector((state) => state.cartItems.productData);
-  
+
   const dispatch = useDispatch();
 
   return (

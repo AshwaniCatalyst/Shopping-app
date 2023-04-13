@@ -4,11 +4,17 @@ import React from "react";
 import "./Products.css";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { totalCartProducts } from "./Product-layout";
 const Header = () => {
-
+ var counter = totalCartProducts
   const totalCartItems = useSelector((state) => state.cartItems.productData);
+  if(!totalCartItems.length)
+  {
+    counter = 0;
+  }
   return (
     <>
+
       <AppBar position="relative">
         <div className="headerOuterContainer flex">
           <div>
@@ -25,11 +31,12 @@ const Header = () => {
               </Link>
             </div>
             <div>
-              <Badge badgeContent={totalCartItems.length} color="secondary">
+              <Badge badgeContent={counter} color="secondary">
                 <NavLink to={"/cart"}>
                   <ShoppingCartIcon className="cart-btn" />
                 </NavLink>
               </Badge>
+               
             </div>
           </div>
         </div>
